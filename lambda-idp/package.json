@@ -1,0 +1,14 @@
+{
+  "name": "smart-on-fhir-idp-lambda",
+  "version": "1.0.0",
+  "description": "SMART on FHIR Identity Provider Lambda for AWS HealthLake",
+  "main": "index.js",
+  "dependencies": {
+    "aws-sdk": "^2.1692.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
