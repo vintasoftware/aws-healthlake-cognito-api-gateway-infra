@@ -49,7 +49,11 @@ To deploy the stack:
 
 ```bash
 npm install
-cdk deploy
+
+AUTH_DOMAIN_NAME=auth.mydomain.com API_DOMAIN_NAME=api.mydomain.com HOSTED_ZONE_NAME=mydomain.com HOSTED_ZONE_ID=Z09773219GD7CGO9RMZF cdk deploy CognitoCertificateStack
+
+# with the output of the previous deploy
+AUTH_DOMAIN_NAME=auth.mydomain.com API_DOMAIN_NAME=api.mydomain.com HOSTED_ZONE_NAME=mydomain.com HOSTED_ZONE_ID=Z09773219GD7CGO9RMZF COGNITO_CERTIFICATE_ARN=arn:aws:acm:us-east-1:338756015813:certificate/981bb57d-63e1-1234-b863-0205b1a6695b cdk deploy TestHealthlakeCdkStack
 ```
 
 After deployment, note the outputs:

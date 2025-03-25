@@ -170,7 +170,8 @@ export class HealthlakeCdkStack extends cdk.Stack {
         COGNITO_USER_POOL_ID: userPool.userPoolId,
         COGNITO_CLIENT_ID: userPoolClient.userPoolClientId,
         COGNITO_REGION: this.region,
-        HEALTHLAKE_ROLE_ARN: healthLakeExecutionRole.roleArn
+        HEALTHLAKE_ROLE_ARN: healthLakeExecutionRole.roleArn,
+        OAUTH2_SERVER_URL: `${props.authDomainName}/oauth2/token`,
       },
       timeout: cdk.Duration.seconds(30),
     });
